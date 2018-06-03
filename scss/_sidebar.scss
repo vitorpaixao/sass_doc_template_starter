@@ -1,4 +1,6 @@
 
+
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -8,16 +10,15 @@
 }
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
     background: #7386D5;
     color: #fff;
-    transition: all 0.3s;
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    height: calc(100vh - #{$header-height});
 }
 
-#sidebar.active {
-    margin-left: -250px;
-}
+
 
 #sidebar .sidebar-header {
     padding: 20px;
@@ -48,3 +49,13 @@
     color: #fff;
     background: #6d7fcc;
 }
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    padding: 0;
+    min-height: 100vh;
+}
+  

@@ -1,0 +1,43 @@
+$base-animation: all 0.3s;
+// $base-animation: all 3s;
+
+#content {
+    transition: $base-animation;
+    margin-left: $sidenav-size;
+    margin-top: $header-height;
+
+    &.active {
+        margin-left: 0;
+    }
+}
+
+#sidebar {
+    transition: $base-animation;
+    min-width: $sidenav-size;
+    max-width: $sidenav-size;
+
+    &.active {
+        margin-left: -$sidenav-size;
+    }
+}
+
+
+.section {
+    overflow: hidden;
+    .text {
+        transition: $base-animation;
+        width: calc(100% - #{$code-size});
+        &.active {
+            width: 100%;
+        }
+    }
+
+    code {
+        transition: $base-animation;
+        width: $code-size;
+
+        &.active {
+            margin-right: -#{$code-size};
+        }
+    }
+}

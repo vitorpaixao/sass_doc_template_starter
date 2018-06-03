@@ -67,24 +67,17 @@ a.article, a.article:hover {
   color: #fff !important;
 }
 
-
-/* ---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------ */
-#content {
-  padding: 20px;
-  min-height: 100vh;
-  transition: all 0.3s;
-}
-
 /* ---------------------------------------------------
   MEDIAQUERIES
 ----------------------------------------------------- */
 @media (max-width: 768px) {
   #sidebar {
-      margin-left: -250px;
+      margin-left: -$sidenav-size;
   }
   #sidebar.active {
+      margin-left: 0;
+  }
+  #content {
       margin-left: 0;
   }
   #sidebarCollapse span {

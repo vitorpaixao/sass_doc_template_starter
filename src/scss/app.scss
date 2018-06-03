@@ -6,7 +6,7 @@
  */
 
 @import "functions";
-@import "../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables";
 @import "defaults/variables";
 @import "mixins";
 @import "root";
@@ -48,3 +48,5 @@
 @import "typography";
 @import "util";
 @import "animations";
+
+@import "../../src/scss/tp/mCustomScrollbar.min.css";

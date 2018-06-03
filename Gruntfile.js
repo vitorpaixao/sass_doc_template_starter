@@ -3,6 +3,7 @@ module.exports = function (grunt) {
 
   // Force use of Unix newlines
   grunt.util.linefeed = '\n';
+  grunt.loadNpmTasks("grunt-contrib-concat");
 
   RegExp.quote = function (string) {
     return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
@@ -22,7 +23,19 @@ module.exports = function (grunt) {
 
   // Project configuration.
   grunt.initConfig({
-      sass: {
+    concat: {
+      dist: {
+        src: [
+          "node_modules/jquery/dist/jquery.js", 
+          "node_modules/popper.js/dist/umd/popper.js",
+          "node_modules/bootstrap/dist/js/bootstrap.js",
+          "src/js/jquery.mCustomScrollbar.concat.min.js",
+          "src/js/index.js"
+        ],
+        dest: "dist/js/app.js"
+      }
+    },
+    sass: {
       options: {
         includePaths: ['node_modules/bootstrap/scss'],
         precision: 6,
@@ -32,7 +45,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'css/app.css': 'scss/app.scss'
+          'dist/css/app.css': 'src/scss/app.scss'
         }
       }
     },
@@ -45,12 +58,12 @@ module.exports = function (grunt) {
             autoprefixer
           ]
         },
-        src: 'css/*.css'
+        src: 'dist/css/*.css'
       }
     },
     watch: {
       sass: {
-        files: 'scss/**/*.scss',
+        files: 'src/scss/**/*.scss',
         tasks: ['compile-sass'],
         options: {
          livereload: true 
@@ -61,15 +74,21 @@ module.exports = function (grunt) {
         options: {
          livereload: true 
         }
+      },
+      js: {
+        files: 'src/js/*.js',
+        options: {
+         livereload: true 
+        }
       }          
     },
     connect: {
-    server: {
-      options: {
-        port: 8080,
-        livereload: true
+      server: {
+        options: {
+          port: 8080,
+          livereload: true
+        }
       }
-    }
     }
   });
   
@@ -79,6 +98,6 @@ module.exports = function (grunt) {
       
   grunt.registerTask('compile-sass', ['sass', 'postcss']);
   // Default task.
-  grunt.registerTask('default', ['sass', 'postcss', 'connect', 'watch']);
+  grunt.registerTask('default', ['sass', 'concat', 'postcss', 'connect', 'watch']);
 
 };

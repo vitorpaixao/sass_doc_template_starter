@@ -1,0 +1,265 @@
+
+// Pagination
+
+$pagination-padding-y:              .5rem !default;
+$pagination-padding-x:              .75rem !default;
+$pagination-padding-y-sm:           .25rem !default;
+$pagination-padding-x-sm:           .5rem !default;
+$pagination-padding-y-lg:           .75rem !default;
+$pagination-padding-x-lg:           1.5rem !default;
+$pagination-line-height:            1.25 !default;
+
+$pagination-color:                  $link-color !default;
+$pagination-bg:                     $white !default;
+$pagination-border-width:           $border-width !default;
+$pagination-border-color:           #ddd !default;
+
+$pagination-hover-color:            $link-hover-color !default;
+$pagination-hover-bg:               $gray-200 !default;
+$pagination-hover-border-color:     #ddd !default;
+
+$pagination-active-color:           $white !default;
+$pagination-active-bg:              theme-color("primary") !default;
+$pagination-active-border-color:    theme-color("primary") !default;
+
+$pagination-disabled-color:         $gray-600 !default;
+$pagination-disabled-bg:            $white !default;
+$pagination-disabled-border-color:  #ddd !default;
+
+
+// Jumbotron
+
+$jumbotron-padding:                 2rem !default;
+$jumbotron-bg:                      $gray-200 !default;
+
+
+// Cards
+
+$card-spacer-y:                     .75rem !default;
+$card-spacer-x:                     1.25rem !default;
+$card-border-width:                 $border-width !default;
+$card-border-radius:                $border-radius !default;
+$card-border-color:                 rgba($black,.125) !default;
+$card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
+$card-cap-bg:                       rgba($black, .03) !default;
+$card-bg:                           $white !default;
+
+$card-img-overlay-padding:          1.25rem !default;
+
+$card-group-margin:                 ($grid-gutter-width / 2) !default;
+$card-deck-margin:                  $card-group-margin !default;
+
+$card-columns-count:                3 !default;
+$card-columns-gap:                  1.25rem !default;
+$card-columns-margin:               $card-spacer-y !default;
+
+
+// Tooltips
+
+$tooltip-max-width:                 200px !default;
+$tooltip-color:                     $white !default;
+$tooltip-bg:                        $black !default;
+$tooltip-opacity:                   .9 !default;
+$tooltip-padding-y:                 3px !default;
+$tooltip-padding-x:                 8px !default;
+$tooltip-margin:                    0 !default;
+
+
+$tooltip-arrow-width:               5px !default;
+$tooltip-arrow-height:              5px !default;
+$tooltip-arrow-color:               $tooltip-bg !default;
+
+
+// Popovers
+
+$popover-bg:                        $white !default;
+$popover-max-width:                 276px !default;
+$popover-border-width:              $border-width !default;
+$popover-border-color:              rgba($black,.2) !default;
+$popover-box-shadow:                0 .25rem .5rem rgba($black,.2) !default;
+
+$popover-header-bg:                 darken($popover-bg, 3%) !default;
+$popover-header-color:              $headings-color !default;
+$popover-header-padding-y:          .5rem !default;
+$popover-header-padding-x:          .75rem !default;
+
+$popover-body-color:                $body-color !default;
+$popover-body-padding-y:            $popover-header-padding-y !default;
+$popover-body-padding-x:            $popover-header-padding-x !default;
+
+$popover-arrow-width:               .8rem !default;
+$popover-arrow-height:              .4rem !default;
+$popover-arrow-color:               $popover-bg !default;
+
+$popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
+
+
+// Badges
+
+$badge-font-size:                   75% !default;
+$badge-font-weight:                 $font-weight-bold !default;
+$badge-padding-y:                   .25em !default;
+$badge-padding-x:                   .4em !default;
+$badge-border-radius:               $border-radius !default;
+
+$badge-pill-padding-x:              .6em !default;
+// Use a higher than normal value to ensure completely rounded edges when
+// customizing padding or font-size on labels.
+$badge-pill-border-radius:          10rem !default;
+
+
+// Modals
+
+// Padding applied to the modal body
+$modal-inner-padding:               15px !default;
+
+$modal-dialog-margin:               10px !default;
+$modal-dialog-margin-y-sm-up:       30px !default;
+
+$modal-title-line-height:           $line-height-base !default;
+
+$modal-content-bg:                  $white !default;
+$modal-content-border-color:        rgba($black,.2) !default;
+$modal-content-border-width:        $border-width !default;
+$modal-content-box-shadow-xs:       0 3px 9px rgba($black,.5) !default;
+$modal-content-box-shadow-sm-up:    0 5px 15px rgba($black,.5) !default;
+
+$modal-backdrop-bg:                 $black !default;
+$modal-backdrop-opacity:            .5 !default;
+$modal-header-border-color:         $gray-200 !default;
+$modal-footer-border-color:         $modal-header-border-color !default;
+$modal-header-border-width:         $modal-content-border-width !default;
+$modal-footer-border-width:         $modal-header-border-width !default;
+$modal-header-padding:              15px !default;
+
+$modal-lg:                          800px !default;
+$modal-md:                          500px !default;
+$modal-sm:                          300px !default;
+
+$modal-transition:                  transform .3s ease-out !default;
+
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-padding-y:                   .75rem !default;
+$alert-padding-x:                   1.25rem !default;
+$alert-margin-bottom:               1rem !default;
+$alert-border-radius:               $border-radius !default;
+$alert-link-font-weight:            $font-weight-bold !default;
+$alert-border-width:                $border-width !default;
+
+
+// Progress bars
+
+$progress-height:                   1rem !default;
+$progress-font-size:                ($font-size-base * .75) !default;
+$progress-bg:                       $gray-200 !default;
+$progress-border-radius:            $border-radius !default;
+$progress-box-shadow:               inset 0 .1rem .1rem rgba($black,.1) !default;
+$progress-bar-color:                $white !default;
+$progress-bar-bg:                   theme-color("primary") !default;
+$progress-bar-animation-timing:     1s linear infinite !default;
+$progress-bar-transition:           width .6s ease !default;
+
+// List group
+
+$list-group-bg:                     $white !default;
+$list-group-border-color:           rgba($black,.125) !default;
+$list-group-border-width:           $border-width !default;
+$list-group-border-radius:          $border-radius !default;
+
+$list-group-item-padding-y:         .75rem !default;
+$list-group-item-padding-x:         1.25rem !default;
+
+$list-group-hover-bg:               $gray-100 !default;
+$list-group-active-color:           $component-active-color !default;
+$list-group-active-bg:              $component-active-bg !default;
+$list-group-active-border-color:    $list-group-active-bg !default;
+
+$list-group-disabled-color:         $gray-600 !default;
+$list-group-disabled-bg:            $list-group-bg !default;
+
+$list-group-action-color:           $gray-700 !default;
+$list-group-action-hover-color:     $list-group-action-color !default;
+
+$list-group-action-active-color:    $body-color !default;
+$list-group-action-active-bg:       $gray-200 !default;
+
+
+// Image thumbnails
+
+$thumbnail-padding:                 .25rem !default;
+$thumbnail-bg:                      $body-bg !default;
+$thumbnail-border-width:            $border-width !default;
+$thumbnail-border-color:            #ddd !default;
+$thumbnail-border-radius:           $border-radius !default;
+$thumbnail-box-shadow:              0 1px 2px rgba($black,.075) !default;
+$thumbnail-transition:              all .2s ease-in-out !default;
+
+
+// Figures
+
+$figure-caption-font-size:          90% !default;
+$figure-caption-color:              $gray-600 !default;
+
+
+// Breadcrumbs
+
+$breadcrumb-padding-y:              .75rem !default;
+$breadcrumb-padding-x:              1rem !default;
+$breadcrumb-item-padding:           .5rem !default;
+
+$breadcrumb-margin-bottom:          1rem !default;
+
+$breadcrumb-bg:                     $gray-200 !default;
+$breadcrumb-divider-color:          $gray-600 !default;
+$breadcrumb-active-color:           $gray-600 !default;
+$breadcrumb-divider:                "/" !default;
+
+
+// Carousel
+
+$carousel-control-color:            $white !default;
+$carousel-control-width:            15% !default;
+$carousel-control-opacity:          .5 !default;
+
+$carousel-indicator-width:          30px !default;
+$carousel-indicator-height:         3px !default;
+$carousel-indicator-spacer:         3px !default;
+$carousel-indicator-active-bg:      $white !default;
+
+$carousel-caption-width:            70% !default;
+$carousel-caption-color:            $white !default;
+
+$carousel-control-icon-width:       20px !default;
+
+$carousel-control-prev-icon-bg:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$carousel-control-next-icon-bg:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$carousel-transition:               transform .6s ease !default;
+
+
+// Close
+
+$close-font-size:                   $font-size-base * 1.5 !default;
+$close-font-weight:                 $font-weight-bold !default;
+$close-color:                       $black !default;
+$close-text-shadow:                 0 1px 0 $white !default;
+
+// Code
+
+$code-font-size:                    90% !default;
+$code-padding-y:                    .2rem !default;
+$code-padding-x:                    .4rem !default;
+$code-color:                        #bd4147 !default;
+$code-bg:                           $gray-100 !default;
+
+$kbd-color:                         $white !default;
+$kbd-bg:                            $gray-900 !default;
+
+$pre-color:                         $gray-900 !default;
+$pre-scrollable-max-height:         340px !default;
+$print-page-size:                   a3 !default;
+$print-body-min-width:              680px !default;

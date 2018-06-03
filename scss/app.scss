@@ -7,7 +7,7 @@
 
 @import "functions";
 @import "../node_modules/bootstrap/scss/variables";
-@import "variables";
+@import "defaults/variables";
 @import "mixins";
 @import "root";
 @import "print";
@@ -42,10 +42,7 @@
 @import "carousel";
 @import "utilities";
 
-body {
-  padding-top: 5rem;
-}
-.starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
+@import "base";
+@import "layout";
+@import "sidebar";
+@import "typography";

@@ -39,23 +39,7 @@ ul ul a {
 //   color: #fff !important;
 // }
 
-/* ---------------------------------------------------
-  MEDIAQUERIES
------------------------------------------------------ */
-@media (max-width: 768px) {
-  #sidebar {
-      margin-left: -$sidenav-size;
-  }
-  #sidebar.close {
-      margin-left: 0;
-  }
-  #content {
-      margin-left: 0;
-  }
-  #sidebarCollapse span {
-      display: none;
-  }
-}
+
 
 .bg-light {
   background-color: #ffffff !important;

@@ -76,3 +76,38 @@ a, a:hover, a:focus {
   a[aria-expanded="true"]::before {
     content: '\e260';
   }
+
+
+/* ---------------------------------------------------
+  MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -$sidenav-size;
+    }
+    #sidebar.close {
+        margin-left: 0;
+    }
+    #content {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+    .section {
+        .text {
+            width: 100%;
+        }
+        code {
+            // width: 80%;
+            right: 80%;
+            height: 150%;
+            margin-right: -80%;
+            position: absolute;
+
+            &.closed {
+                width: 100%;
+            }
+        }
+    }
+  }

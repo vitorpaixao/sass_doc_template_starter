@@ -1,12 +1,13 @@
 $(document).ready(function () {
+
     $("#sidebar").mCustomScrollbar({
       theme: "minimal"
     });
 
     $('#sidebarCollapse').on('click', function () {
       // open or close navbar
-      $('#sidebar').toggleClass('active');
-      $('#content').toggleClass('active');
+      $('#sidebar').toggleClass('closed');
+      $('#content').toggleClass('closed');
       // close dropdowns
       $('.collapse.in').toggleClass('in');
       // and also adjust aria-expanded attributes we use for the open/closed arrows
@@ -16,8 +17,7 @@ $(document).ready(function () {
 
     $('#codeCollapse').on('click', function () {
       // open or close navbar
-      $('#content .text').toggleClass('active');
-      $('#content code').toggleClass('active');
+      $('#content .text').toggleClass('closed');
+      $('#content code').toggleClass('closed');
     });
-
-  });
+});

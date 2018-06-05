@@ -10,6 +10,7 @@
 }
 
 #codeCollapse {
+    z-index: 9999;
     position: fixed;
     transition: $base-animation;
     top: calc(#{$header-height} + 20px);
@@ -81,13 +82,16 @@ a, a:hover, a:focus {
 /* ---------------------------------------------------
   MEDIAQUERIES
 ----------------------------------------------------- */
+
+
+
 @media (max-width: 768px) {
     #sidebar {
         margin-left: -$sidenav-size;
     }
-    #sidebar.close {
-        margin-left: 0;
-    }
+    // #sidebar.close {
+    //     margin-left: 0;
+    // }
     #content {
         margin-left: 0;
     }
@@ -95,19 +99,29 @@ a, a:hover, a:focus {
         display: none;
     }
     .section {
+        position: relative;
         .text {
             width: 100%;
         }
         code {
-            // width: 80%;
-            right: 80%;
-            height: 150%;
-            margin-right: -80%;
+            
             position: absolute;
+            transition: $base-animation;
+            border-radius: $border-radius;
+
+            width: $largura;
+            height: 150%;
+            left: calc( 100% - #{$largura} );
 
             &.closed {
-                width: 100%;
+                left: $largura-f;
             }
+        }
+    }
+    #codeCollapse {
+        left: calc( (100% - #{$largura}) - 5% );
+        &.closed {
+            left: calc( #{$largura-f} - 5%);
         }
     }
   }

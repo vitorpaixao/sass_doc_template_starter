@@ -35,22 +35,26 @@
 }
 
 .section {
+    position: relative;
     overflow: hidden;
     .text {
         transition: $base-animation;
-        width: calc(100% - #{$code-size});
+        width: calc(100% - #{$largura});
         &.closed {
             width: 100%;
         }
     }
 
     code {
+        position: absolute;
         transition: $base-animation;
-        width: $code-size;
         border-radius: $border-radius;
-
+        
+        width: $largura;
+        height: 150%;
+        left: calc( 100% - #{$largura} );
         &.closed {
-            margin-right: -#{$code-size};
+            left: $largura-f;
         }
     }
 }
@@ -86,42 +90,46 @@ a, a:hover, a:focus {
 
 
 @media (max-width: 768px) {
-    #sidebar {
-        margin-left: -$sidenav-size;
-    }
-    // #sidebar.close {
+    // #sidebar {
+    //     margin-left: -$sidenav-size;
+    // }
+    // #content {
     //     margin-left: 0;
     // }
-    #content {
-        margin-left: 0;
-    }
-    #sidebarCollapse span {
-        display: none;
-    }
+    // #sidebarCollapse span {
+    //     display: none;
+    // }
+    // .section {
+    //     position: relative;
+    //     .text {
+    //         transition: $base-animation;
+    //         width: 100%;
+    //     }
+    //     code {
+    //         position: absolute;
+    //         transition: $base-animation;
+    //         border-radius: $border-radius;
+
+    //         width: $largura;
+    //         height: 150%;
+    //         left: calc( 100% - #{$largura} );
+
+    //         &.closed {
+    //             left: $largura-f;
+    //         }
+    //     }
+    // }
+    // #codeCollapse {
+    //     left: calc( (100% - #{$largura}) - 5% );
+    //     &.closed {
+    //         left: calc( #{$largura-f} - 5%);
+    //     }
+    // }
     .section {
         position: relative;
         .text {
-            width: 100%;
-        }
-        code {
-            
-            position: absolute;
             transition: $base-animation;
-            border-radius: $border-radius;
-
-            width: $largura;
-            height: 150%;
-            left: calc( 100% - #{$largura} );
-
-            &.closed {
-                left: $largura-f;
-            }
-        }
-    }
-    #codeCollapse {
-        left: calc( (100% - #{$largura}) - 5% );
-        &.closed {
-            left: calc( #{$largura-f} - 5%);
+            width: 100%;
         }
     }
   }

@@ -16575,7 +16575,6 @@ $(document).ready(function () {
       // open or close navbar
       $('#content .text').toggleClass('closed');
       $('#content code').toggleClass('closed');
-      
     });
 
 

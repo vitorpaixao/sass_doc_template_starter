@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
+    padding: 7px;
     background: #fff;
     border: none;
     border-radius: 0;
@@ -29,7 +29,7 @@
     border-top: solid 1px #dedede;
     
     .text {
-        padding: 20px;
+        padding: 30px;
     }
 
     code {
@@ -39,3 +39,24 @@
 }
 
 
+// li.nav-item {
+    .nav-tabs .nav-link {
+        border: 0px;
+        color: #ffffff;
+        background-color: transparent;
+        border-bottom: 0px solid transparent;
+        border-color: #ffffff;
+    }
+    
+    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+        color: #ffffff;
+        background-color: transparent;
+        border-color: transparent;
+        border-bottom: 4px solid transparent;
+        border-color: #ffffff;
+    }
+
+    a, a:hover, a:focus {
+        transition: unset;
+    }
+// }

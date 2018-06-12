@@ -23,39 +23,41 @@
       <i class="fas fa-angle-double-right"></i>
     </button>
 
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
+    <div class="collapse navbar-collapse mr-2" id="navbarSupportedContent">
+      <div class="mr-auto"></div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control form-control-sm mr-sm-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+
+    <ul class="navbar-nav mr-2">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
-          Dropdown
+          Versão 3.0.17
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Versão 3.0.0</a>
+          <a class="dropdown-item" href="#">Versão 2.4.25</a>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="mr-auto"></div>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control form-control-sm mr-sm-2" type="Buscar" placeholder="Search" aria-label="Search">
-        <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
+    <ul class="navbar-nav mr-2">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <img src="./dist/img/brazil.png" />
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <!-- <a class="dropdown-item" href="#"><img src="./dist/img/brazil.png" /></a> -->
+          <a class="dropdown-item" href="#"><img src="./dist/img/usa.png" /></a>
+        </div>
+      </li>
+    </ul>
+
+    
 
   </nav>
 
@@ -114,22 +116,22 @@
           <p class="grey_text">Permite o cadastro e manutenção de usuários e prospects, assim como o gerenciamento de suas respectivas permissões
             nos serviços em que participam.</p>
           <div>URL:</div>
-          <a href="">http://users.mialogic.com/v{x}/</a>
+          <a href="#" target="_blank">http://users.mialogic.com/v{x}/</a>
           <p>O parâmetro {x} é obrigatório e indica a versão da API.</p>
 
-          <div>RECURSOS:</div>
+          <h3 class="grey">RECURSOS:</h3>
           <ul>
             <li>Usuários (users)</li>
             <li>Prospects (prospects)</li>
             <li>Newsletter (newsletter)</li>
           </ul>
 
-          <div>DEPENDÊNCIA DE PACOTES:</div>
+          <h3 class="grey">DEPENDÊNCIA DE PACOTES:</h3>
           <ul>
             <li>mialogic_core</li>
           </ul>
 
-          <div>ENDPOINTS:</div>
+          <h3 class="grey">ENDPOINTS:</h3>
           <ul>
             <li>/</li>
             <li>sign-in</li>
@@ -143,18 +145,22 @@
                 <i class="fas fa-angle-double-right"></i>
             </button>
 
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <ul class="nav nav-pills px-4 py-2 --code-bg-black" id="pills-tab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+                  Home
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                  Profile
+                </a>
               </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
               <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
             
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <ul class="nav nav-tabs px-4 --code-bg-black" id="myTab" role="tablist">
                   <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
                   </li>
@@ -165,9 +171,29 @@
                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
                   </li>
                 </ul>
-                <div class="tab-content" id="myTabContent">
+                <div class="tab-content p-4" id="myTabContent">
                   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      Home
+                      <div class="title">Retorno JSON QUANDO status=false</div>
+                      <pre>
+  {
+    "status": false,
+    "returnMessage": "Mensagem genérica de erro",
+    "data":[],
+    "errors": [
+      {
+        "source": { "pointer": "/data/attributes/first-name" },
+        "code": "alphaNum",
+        "detail": "First name must contain at least three characters."
+      },
+      {
+        "source": { "pointer": "/data/attributes/first-name" },
+        "code": "alphaNum",
+        "detail": "First name must contain an emoji."
+      },
+      ...
+    ]
+  }
+                      </pre>
                   </div>
                   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                       Profile
@@ -178,10 +204,13 @@
                 </div>
 
               </div>
-              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+
+              <div class="tab-pane fade p-4" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                ...
+              </div>
             </div>
 
-          </code>
+        </code>
       </section>
 
       <section class="row --row section">

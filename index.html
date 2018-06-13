@@ -51,13 +51,12 @@
           <img src="./dist/img/brazil.png" />
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <!-- <a class="dropdown-item" href="#"><img src="./dist/img/brazil.png" /></a> -->
-          <a class="dropdown-item" href="#"><img src="./dist/img/usa.png" /></a>
+          <a class="dropdown-item" href="#">
+            <img src="./dist/img/usa.png" />
+          </a>
         </div>
       </li>
     </ul>
-
-    
 
   </nav>
 
@@ -66,7 +65,9 @@
 
       <ul class="list-unstyled components">
         <li class="active">
-          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+          <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">
+            Home
+          </a>
           <ul class="collapse list-unstyled" id="homeSubmenu">
             <li>
               <a href="#">Home 1</a>
@@ -83,7 +84,9 @@
           <a href="#">About</a>
         </li>
         <li>
-          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+            <a href="#pageSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">
+              Pages
+            </a>
           <ul class="collapse list-unstyled" id="pageSubmenu">
             <li>
               <a href="#">Page 1</a>
@@ -111,12 +114,12 @@
 
       <section class="row --row section">
         <div class="text">
-          <h1 class="primary">Sobre</h1>
-          <h2 class="grey">Api Users</h2>
+          <h1 class="primary mb-3">Sobre</h1>
+          <h2 class="grey mb-3">Api Users</h2>
           <p class="grey_text">Permite o cadastro e manutenção de usuários e prospects, assim como o gerenciamento de suas respectivas permissões
             nos serviços em que participam.</p>
           <div>URL:</div>
-          <a href="#" target="_blank">http://users.mialogic.com/v{x}/</a>
+          <a class="my-2" href="#" target="_blank">http://users.mialogic.com/v{x}/</a>
           <p>O parâmetro {x} é obrigatório e indica a versão da API.</p>
 
           <h3 class="grey">RECURSOS:</h3>
@@ -133,11 +136,13 @@
 
           <h3 class="grey">ENDPOINTS:</h3>
           <ul>
-            <li>/</li>
-            <li>sign-in</li>
-            <li>prospects</li>
-            <li>prospects/{id}/sign-up</li>
-            <li>newsletter/</li>
+            <li>
+              <a href="#" target="_blank">/</a>
+            </li>
+            <li><a href="#" target="_blank">sign-in</a></li>
+            <li><a href="#" target="_blank">prospects</a></li>
+            <li><a href="#" target="_blank">prospects/{id}/sign-up</a></li>
+            <li><a href="#" target="_blank">newsletter/</a></li>
           </ul>
         </div>
         <code id="code">

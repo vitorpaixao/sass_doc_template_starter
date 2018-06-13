@@ -73,20 +73,20 @@
     position: relative;
   }
 
-  .all_menu {
-      a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
-        content: '\e259';
-        display: block;
-        position: absolute;
-        right: 20px;
-        font-family: 'Glyphicons Halflings';
-        font-size: 0.6em;
-      }
+//   .all_menu {
+//       a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+//         font-family: 'Glyphicons Halflings';
+//         content: '\e001';
+//         display: block;
+//         position: absolute;
+//         right: 20px;
+//         font-size: 0.6em;
+//       }
       
-      a[aria-expanded="true"]::before {
-        content: '\e260';
-      }
-  }
+//       a[aria-expanded="true"]::before {
+//         content: '\e001';
+//       }
+//   }
   
 
 
@@ -104,6 +104,11 @@
         position: relative;
         .text {
             transition: $base-animation;
+            width: 100%;
+        }
+        code {
+            transition: $base-animation;
+            left: 0%;
             width: 100%;
         }
     }

@@ -3,7 +3,7 @@
 h1 { font-size: 30px; }
 h2 { font-size: 24px; }
 
-.primary { color: #50A6CA; }
+.primary { color: $primary; }
 .grey { color: #666666; }
 .grey_text { color: #6f6f6f; }
 
@@ -16,6 +16,30 @@ h2 { font-size: 24px; }
 }
 
 @import "glyphicons";
+
+// @font-face {
+//     font-family: 'Fjalla One';
+//     font-weight: 300;
+//     src: url("../font/Fjalla_One/FjallaOne-Regular.ttf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: 'Oswald';
+//     font-weight: 400;
+//     src: url("../font/Oswald/Oswald-Regular.ttf") format("truetype");
+// }
+
+@font-face {
+    font-family: 'Consolas';
+    font-weight: 400;
+    src: url("../font/Consolas/Consolas.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Menlo';
+    font-weight: 400;
+    src: url("../font/Menlo/Menlo-Regular.ttf") format("truetype");
+}
 
 @font-face {
     font-family: 'Montserrat';
@@ -47,10 +71,7 @@ h2 { font-size: 24px; }
 @font-face {
     font-family: 'Merriweather';
     font-weight: 300;
-    src: url("../font/Merriweather/Merriweather-Regular.eot") format("eot"),
-        url("../font/Merriweather/Merriweather-Regular.woff2") format("woff2"),
-        url("../font/Merriweather/Merriweather-Regular.woff") format("woff"),
-        url("../font/Merriweather/Merriweather-Regular.ttf") format("truetype");
+    src: url("../font/Merriweather/Merriweather-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -61,6 +82,3 @@ h2 { font-size: 24px; }
         url("../font/Merriweather/Merriweather-Bold.woff") format("woff"),
         url("../font/Merriweather/Merriweather-Bold.ttf") format("truetype");
 }
-
-$font-family-sans-serif:    "Merriweather";
-$font-family-monospace:     "Montserrat";

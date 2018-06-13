@@ -16595,7 +16595,7 @@ $(document).ready(function () {
         $('#content .codeCollapse').addClass('closed');
         
       }
-      if ( size >= 800) {
+      if ( size >= 769) {
         console.log('bigger 800');
         $('#sidebar').removeClass('closed');
         $('#content').removeClass('closed');

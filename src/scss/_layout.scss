@@ -31,8 +31,6 @@
     .text {
         padding: 30px;
         a {
-            padding-top: 5px;
-            padding-bottom: 5px;
             display: block;
             color: #337ab7;
             text-decoration: underline;
@@ -43,18 +41,25 @@
     }
 
     code {
+        font-family: $font-family-code;
         padding: 0;
         .--code-bg-black {
             background-color: #263238;
         }
 
         .title {
+            font-family: $font-family-titles;
             color: #f9f9f9;
         }
 
         pre {
+            font-family: $font-family-code;
             color: #cecece;
             font-size: 14px;
+        }
+
+        .nav-tabs .nav-link {
+            font-size: 12px;
         }
         
         background-color: #37474f;
@@ -62,17 +67,27 @@
 }
 
 .nav-tabs .nav-link {
+    font-family: $font-family-titles;
     border: 0px;
-    color: #ffffff;
+    color: $white;
     background-color: transparent;
     border-bottom: 0px solid transparent;
-    border-color: #ffffff;
+    border-color: $primary;
+    &:hover {
+        border-bottom: 4px solid transparent;
+        border-color: $primary;
+    }
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-    color: #ffffff;
+    font-family: $font-family-titles;
+    color: $primary;
     background-color: transparent;
     border-color: transparent;
     border-bottom: 4px solid transparent;
-    border-color: #ffffff;
+    border-color: $primary;
+}
+
+.nav-tabs {
+    border-bottom: none;
 }

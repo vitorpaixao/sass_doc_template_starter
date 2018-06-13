@@ -1,20 +1,19 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-family-contents;
   background: #fafafa;
 }
 
 p {
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-family-contents;
   font-size: 1.1em;
   font-weight: 300;
   line-height: 1.7em;
   color: #999;
 }
 
-ul ul a {
-  font-size: 0.9em !important;
-  padding-left: 30px !important;
-  background: #dddddd;
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-titles;
+  font-weight: bold;
 }
 
 .bg-light {

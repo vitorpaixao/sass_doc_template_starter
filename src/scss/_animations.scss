@@ -17,6 +17,10 @@
     &.closed {
         margin-left: -$sidenav-size;
     }
+
+    &.active {
+        margin-left: 0;
+    }
 }
 
 .section {
@@ -95,10 +99,15 @@
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
-    
-    #sidebar {
-        z-index: 99;
-        position: fixed;
+    .wrapper {
+        #sidebar {
+            margin-left: -$sidenav-size;
+            z-index: 99;
+            position: fixed;
+        }
+        #content {
+            margin-left: 0;
+        }
     }
     .section {
         position: relative;

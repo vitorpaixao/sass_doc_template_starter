@@ -9,19 +9,20 @@
   <meta name="description" content="Mialogic">
   <meta name="author" content="Mialogic">
   <title>Mialogic</title>
-  <link rel="stylesheet" href="dist/css/app.css">
+  <link rel="stylesheet" href="dist/css/app.min.css">
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="src/img/logo.png" alt="Mialogic">
-    </a>
 
     <button type="button" id="sidebarCollapse" class="btn btn-default navbar-btn">
       <i class="fas fa-angle-double-right"></i>
     </button>
+
+    <a class="navbar-brand" href="#">
+      <img src="src/img/logo.png" alt="Mialogic">
+    </a>
 
     <div class="collapse navbar-collapse mr-2" id="navbarSupportedContent">
       <div class="mr-auto"></div>
@@ -219,58 +220,216 @@
       </section>
 
       <section class="row --row section">
-        <div class="text">
-
-          <h2>Lorem Ipsum Dolor</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        </div>
-        <code id="code">
-            <button type="button" class="btn btn-default navbar-btn codeCollapse">
-                <i class="fas fa-angle-double-right"></i>
-            </button>
-            dddd
+          <div class="text">
+            <h1 class="primary mb-3">Sobre</h1>
+            <h2 class="grey mb-3">Api Users</h2>
+            <p class="grey_text">Permite o cadastro e manutenção de usuários e prospects, assim como o gerenciamento de suas respectivas permissões
+              nos serviços em que participam.</p>
+            <div>URL:</div>
+            <a class="my-2" href="#" target="_blank">http://users.mialogic.com/v{x}/</a>
+            <p>O parâmetro {x} é obrigatório e indica a versão da API.</p>
+  
+            <h3 class="grey">RECURSOS:</h3>
+            <ul>
+              <li>Usuários (users)</li>
+              <li>Prospects (prospects)</li>
+              <li>Newsletter (newsletter)</li>
+            </ul>
+  
+            <h3 class="grey">DEPENDÊNCIA DE PACOTES:</h3>
+            <ul>
+              <li>mialogic_core</li>
+            </ul>
+  
+            <h3 class="grey">ENDPOINTS:</h3>
+            <ul>
+              <li>
+                <a href="#" target="_blank">/</a>
+              </li>
+              <li><a href="#" target="_blank">sign-in</a></li>
+              <li><a href="#" target="_blank">prospects</a></li>
+              <li><a href="#" target="_blank">prospects/{id}/sign-up</a></li>
+              <li><a href="#" target="_blank">newsletter/</a></li>
+            </ul>
+          </div>
+          <code id="code">
+              <button type="button" class="btn btn-default navbar-btn codeCollapse">
+                  <i class="fas fa-angle-double-right"></i>
+              </button>
+  
+              <ul class="nav nav-pills px-4 py-2 --code-bg-black" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+                    Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                    Profile
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              
+                  <ul class="nav nav-tabs px-4 --code-bg-black" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content p-4" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="title">Retorno JSON QUANDO status=false</div>
+                        <pre>
+    {
+      "status": false,
+      "returnMessage": "Mensagem genérica de erro",
+      "data":[],
+      "errors": [
+        {
+          "source": { "pointer": "/data/attributes/first-name" },
+          "code": "alphaNum",
+          "detail": "First name must contain at least three characters."
+        },
+        {
+          "source": { "pointer": "/data/attributes/first-name" },
+          "code": "alphaNum",
+          "detail": "First name must contain an emoji."
+        },
+        ...
+      ]
+    }
+                        </pre>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        Profile
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        Contact
+                    </div>
+                  </div>
+  
+                </div>
+  
+                <div class="tab-pane fade p-4" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                  ...
+                </div>
+              </div>
+  
           </code>
-      </section>
+        </section>
 
-      <section class="row --row section">
-        <div class="text">
-
-          <h2>Lorem Ipsum Dolor</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        </div>
-        <code id="code">
-            <button type="button" class="btn btn-default navbar-btn codeCollapse">
-                <i class="fas fa-angle-double-right"></i>
-            </button>
-            dddd
-          </code>
-      </section>
-
-      <section class="row --row section">
-        <div class="text">
-
-          <h2>Lorem Ipsum Dolor</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        </div>
-        <code id="code">
-            <button type="button" class="btn btn-default navbar-btn codeCollapse">
-                <i class="fas fa-angle-double-right"></i>
-            </button>
-            dddd
-          </code>
-      </section>
+        <section class="row --row section">
+            <div class="text">
+              <h1 class="primary mb-3">Sobre</h1>
+              <h2 class="grey mb-3">Api Users</h2>
+              <p class="grey_text">Permite o cadastro e manutenção de usuários e prospects, assim como o gerenciamento de suas respectivas permissões
+                nos serviços em que participam.</p>
+              <div>URL:</div>
+              <a class="my-2" href="#" target="_blank">http://users.mialogic.com/v{x}/</a>
+              <p>O parâmetro {x} é obrigatório e indica a versão da API.</p>
+    
+              <h3 class="grey">RECURSOS:</h3>
+              <ul>
+                <li>Usuários (users)</li>
+                <li>Prospects (prospects)</li>
+                <li>Newsletter (newsletter)</li>
+              </ul>
+    
+              <h3 class="grey">DEPENDÊNCIA DE PACOTES:</h3>
+              <ul>
+                <li>mialogic_core</li>
+              </ul>
+    
+              <h3 class="grey">ENDPOINTS:</h3>
+              <ul>
+                <li>
+                  <a href="#" target="_blank">/</a>
+                </li>
+                <li><a href="#" target="_blank">sign-in</a></li>
+                <li><a href="#" target="_blank">prospects</a></li>
+                <li><a href="#" target="_blank">prospects/{id}/sign-up</a></li>
+                <li><a href="#" target="_blank">newsletter/</a></li>
+              </ul>
+            </div>
+            <code id="code">
+                <button type="button" class="btn btn-default navbar-btn codeCollapse">
+                    <i class="fas fa-angle-double-right"></i>
+                </button>
+    
+                <ul class="nav nav-pills px-4 py-2 --code-bg-black" id="pills-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+                      Home
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                      Profile
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                
+                    <ul class="nav nav-tabs px-4 --code-bg-black" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content p-4" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                          <div class="title">Retorno JSON QUANDO status=false</div>
+                          <pre>
+      {
+        "status": false,
+        "returnMessage": "Mensagem genérica de erro",
+        "data":[],
+        "errors": [
+          {
+            "source": { "pointer": "/data/attributes/first-name" },
+            "code": "alphaNum",
+            "detail": "First name must contain at least three characters."
+          },
+          {
+            "source": { "pointer": "/data/attributes/first-name" },
+            "code": "alphaNum",
+            "detail": "First name must contain an emoji."
+          },
+          ...
+        ]
+      }
+                          </pre>
+                      </div>
+                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                          Profile
+                      </div>
+                      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                          Contact
+                      </div>
+                    </div>
+    
+                  </div>
+    
+                  <div class="tab-pane fade p-4" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    ...
+                  </div>
+                </div>
+    
+            </code>
+          </section>
 
     </div>
   </div>

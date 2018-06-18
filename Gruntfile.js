@@ -4,6 +4,7 @@ module.exports = function (grunt) {
   // Force use of Unix newlines
   grunt.util.linefeed = '\n';
   grunt.loadNpmTasks("grunt-contrib-concat");
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   RegExp.quote = function (string) {
     return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
@@ -61,6 +62,17 @@ module.exports = function (grunt) {
         src: 'dist/css/*.css'
       }
     },
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'dist/css/',
+          src: ['*.css', '!*.min.css'],
+          dest: 'dist/css/',
+          ext: '.min.css'
+        }]
+      }
+    },
     watch: {
       sass: {
         files: 'src/scss/**/*.scss',
@@ -96,7 +108,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt, {});
   require('time-grunt')(grunt);
       
-  grunt.registerTask('compile-sass', ['sass', 'postcss']);
+  grunt.registerTask('compile-sass', ['sass', 'postcss', 'cssmin']);
   // Default task.
   grunt.registerTask('default', ['sass', 'concat', 'postcss', 'connect', 'watch']);
 
